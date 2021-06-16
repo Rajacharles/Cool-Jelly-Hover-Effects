@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  background-color: #222;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 450px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box:hover .imgBx {
+  transform: translateY(-100px);
+}
+
+.box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 2;
+  background-color: #000;
+}
+
+.box .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.box .details h2 {
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.box .details h2 span{
+  color: #8f8f8f;
+  font-size: 16px;
+}
+
+.box:hover .imgBx img {
+  opacity: 0.5;
+}
+
+.box .imgBx img {
+  transition: 0.5s;
+  width: 100%;
+}
+
+.box .social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.box .social-icon li {
+  list-style: none;
+}
+
+.box .social-icon li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background-color: #fff;
+  color: #262626;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateY(150px);
+  opacity: 0;
+}
+
+.box .social-icon li a .bx{
+  font-size: 32px;
+  line-height: 50px;
+  transition: 0.5s;
+}
+
+.box .social-icon li a:hover .bx {
+  transform: rotateY(360deg);
+}
+
+.box:hover .social-icon li a {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.box:hover .social-icon li:nth-child(1) a {
+  transition-delay: 0s;
+}
+
+.box:hover .social-icon li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+
+.box:hover .social-icon li:nth-child(3) a {
+  transition-delay: 0.4s;
+}
+
+.box:hover .social-icon li:nth-child(4) a {
+  transition-delay: 0.6s;
+}
